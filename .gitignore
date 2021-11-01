@@ -1,5 +1,6 @@
 build/
-rgbds/
+docs/
+tools/
 
 # Prerequisites
 *.d
