@@ -467,11 +467,11 @@ def rSVBK               equ $FF70
 def rSMBK               equ rSVBK
 
 ; PCM12 ($FF76)
-; Sound channel 3 & 4 PCM amplitude (R)
+; Sound channel 1 & 2 PCM amplitude (R)
 ;
 ; Bit 7-4:  Copy of sound channel 2's PCM amplitude
 ; Bit 3-0:  Copy of sound channel 1's PCM amplitude
-def rPCM34              equ $FF76
+def rPCM12              equ $FF76
 
 ; PCM34 ($FF77)
 ; Sound channel 3 & 4 PCM amplitude (R)
@@ -678,5 +678,7 @@ macro NINTENDO_LOGO
     db  $00,$08,$11,$1F,$88,$89,$00,$0E,$DC,$CC,$6E,$E6,$DD,$DD,$D9,$99
     db  $BB,$BB,$67,$63,$6E,$0E,$EC,$CC,$DD,$DC,$99,$9F,$BB,$B9,$33,$3E
 endm
+
+endc ; if !def(HARDWARE_INC)
 
 ; vim: filetype=rgbds
